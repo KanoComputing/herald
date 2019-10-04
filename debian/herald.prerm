@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# herald.prerm
+#
+# Copyright (C) 2019 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU GPLv2
+#
+# Pre debian package remove script.
+
+
+case "$1" in
+    remove|upgrade)
+        # Disable system systemd services.
+        systemctl disable start-user-internet-available.service
+        ;;
+esac

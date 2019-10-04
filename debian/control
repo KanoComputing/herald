@@ -1,0 +1,19 @@
+Source: herald
+Maintainer: Team Kano <dev@kano.me>
+Section: admin
+Priority: optional
+Standards-Version: 3.9.4
+Build-Depends:
+    debhelper (>= 9)
+
+Package: herald
+Architecture: any
+Depends:
+    ${shlibs:Depends},
+    ${misc:Depends},
+    coreutils (>= 8.26-3),
+    kano-toolset (>= 4.3.0),
+    python
+Description: Useful Linux systemd targets for common OS events
+ This package contains numerous systemd targets as common events to trigger
+ application systemd services.

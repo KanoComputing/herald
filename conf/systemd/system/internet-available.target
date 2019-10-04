@@ -7,8 +7,9 @@
 # established.
 #
 # NOTE: Services that want to be executed on this target need to be configured
-# to run Before this target and [Install] with RequiredBy. This ensures that
-# the target will wait for all services to finish before triggering again.
+# to run After this target and [Install] with WantedBy. This ensures that
+# the target itself should not fail and that it will NOT wait for all services
+# to finish before triggering again.
 
 
 [Unit]

@@ -8,31 +8,7 @@
 
 import os
 
-from herald.utils import get_logged_in_users, start_user_target
-
-
-def start_internet_available_user_target(user):
-    """Start the internet-available-user.target for a given user."""
-
-    return start_user_target('internet-available-user.target', user)
-
-
-def start_internet_available_user_target_for_all_users():
-    """
-    Start the internet-available-user.target for all currently
-    logged in users.
-    """
-
-    users = get_logged_in_users()
-    users.discard('root')
-
-    successful = True
-
-    for user in users:
-        rc = start_internet_available_user_target(user)
-        successful &= (rc == 0)
-
-    return successful
+from herald.utils import start_user_target_for_all_users
 
 
 def main():
@@ -44,5 +20,7 @@ def main():
 
     # Note: At the moment, it's expected there will only be a single user
     # logged in at any one time.
-    successful = start_internet_available_user_target_for_all_users()
+    successful = start_user_target_for_all_users(
+        'internet-available-user.target'
+    )
     return 0 if successful else 1

@@ -1,0 +1,5 @@
+bin/* /usr/bin/
+
+conf/systemd /usr/lib/
+
+src/herald /usr/lib/python2.7/dist-packages/

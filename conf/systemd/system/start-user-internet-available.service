@@ -1,0 +1,20 @@
+# start-internet-available-user.service
+#
+# Copyright (C) 2019 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU GPL v2
+#
+# System service that gets executed on internet-available.target and which
+# starts internet-available-user.target for the currently logged in user.
+
+
+[Unit]
+Description=Start internet-available-user.target
+DefaultDependencies=no
+Before=internet-available.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/sudo /usr/bin/start-user-internet-available
+
+[Install]
+RequiredBy=internet-available.target

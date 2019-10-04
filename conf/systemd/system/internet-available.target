@@ -1,0 +1,16 @@
+# internet-available.target
+#
+# Copyright (C) 2019 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU GPL v2
+#
+# Target to notify system services of a usable internet connection being
+# established.
+#
+# NOTE: Services that want to be executed on this target need to be configured
+# to run Before this target and [Install] with RequiredBy. This ensures that
+# the target will wait for all services to finish before triggering again.
+
+
+[Unit]
+Description=Internet Available
+DefaultDependencies=yes

@@ -45,4 +45,4 @@ def main():
     # Note: At the moment, it's expected there will only be a single user
     # logged in at any one time.
     successful = start_internet_available_user_target_for_all_users()
-    return 0 if (successful) else 1
+    return 0 if successful else 1

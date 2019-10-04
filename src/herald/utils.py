@@ -23,7 +23,7 @@ def start_user_target(target, user):
     """Start a user systemd target for a given logged in user."""
 
     dummy, dummy, rc = run_cmd_log(
-        "sudo su -c 'systemctl --user start {target}' - {user}"
+        "sudo su -c 'systemctl --user restart {target}' - {user}"
         .format(target=target, user=user)
     )
     return rc

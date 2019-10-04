@@ -4,11 +4,3 @@ Upstream-Contact: Kano developers <dev@kano.me>
 Files: *
 Copyright: 2019 Kano Computing Ltd.
 License: GPL-2+
-
-Files: *.png
-Copyright: 2019 Kano Computing Ltd.
-License: All rights reserved
-
-Files: *.wav
-Copyright: 2019 Kano Computing Ltd.
-License: All rights reserved
